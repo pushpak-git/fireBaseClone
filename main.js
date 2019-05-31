@@ -28,15 +28,14 @@ server.on('connection', (socket) => {
 server.listen(8080, function() { 
    console.log('server is listening');
 });
-const http = require('http');
+const express = require('express');
+const app = express();
 const port = process.env.PORT || 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  console.log('asjbvhdhmjsabdm', req);
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!\n');
-});
+app.get('/', (req, res) => {
+   console.log('asdn,asmnd,m,sad', req);
+   res.send('Cool');
+})
 
 server.listen(port, () => {
   console.log(`Server running at http://:${port}/`);
