@@ -26,7 +26,7 @@ server.on('connection', (socket) => {
    });
 })
 server.listen(8080, function() { 
-   console.log('server is listening');
+   console.log('server is listening at 8080');
 });
 const express = require('express');
 const app = express();
@@ -37,6 +37,6 @@ app.get('/', (req, res) => {
    res.send('Cool');
 })
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server running at http://:${port}/`);
 });
