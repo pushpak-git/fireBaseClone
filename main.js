@@ -33,7 +33,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-   console.log('asdn,asmnd,m,sad', req);
+   console.log('asdn,asmnd,m,sad', req, app, process.env);
    res.send('Cool');
 })
 
