@@ -31,12 +31,13 @@ server.listen(8080, function() {
 const http = require('http');
 const port = process.env.PORT || 3000;
 
-const nodeServer = http.createServer((req, res) => {
+const server = http.createServer((req, res) => {
   res.statusCode = 200;
+  console.log('asjbvhdhmjsabdm', req);
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello, World!\n');
 });
 
-nodeServer.listen(port, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+  console.log(`Server running at http://:${port}/`);
 });
